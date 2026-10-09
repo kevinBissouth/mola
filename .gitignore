@@ -1,0 +1,17 @@
+# Secrets : chaque machine a son propre fichier .env
+.env
+
+# Environnement virtuel et caches Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Caches des outils
+.pytest_cache/
+.ruff_cache/
+
+# Données locales de l'assistant
+*.sqlite3

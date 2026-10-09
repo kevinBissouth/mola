@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mola-assistant"
+version = "0.1.0"
+description = "Assistant personnel de bureau, pilotable au clavier ou à la voix"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mola_assistant"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# E/F : erreurs de base, I : ordre des imports, N : nommage,
+# B : pièges courants, UP : syntaxe moderne, SIM : simplifications
+select = ["E", "F", "I", "N", "B", "UP", "SIM"]
